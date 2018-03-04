@@ -1,0 +1,9 @@
+[{
+    "modid": "realistic-chat",
+    "name": "Realistic Chat",
+    "version": "1.0.0",
+    "description": "Chat like in real life, not everyone can hear you (clearly)!",
+    "authorList": [
+        "olafher"
+    ]
+}]
