@@ -62,10 +62,10 @@ public class RealisticChat {
 			playerMessageChannel.send(Text.builder("Welcome " + player.getName() + "!").color(TextColors.GOLD).build());
 			playerMessageChannel.send(Text.builder("-----------------------").color(TextColors.GOLD).build());
 			playerMessageChannel.send(Text.builder("This server runs Realistic Chat, other players won't be able to hear you from far.").color(TextColors.GOLD).build());
-			playerMessageChannel.send(Text.builder("Add explanation marks (!) at the cost of the hunger effect to shout!").color(TextColors.GOLD).build());
+			playerMessageChannel.send(Text.builder("Add exclamation marks (!) at the cost of the hunger effect to shout!").color(TextColors.GOLD).build());
 			playerMessageChannel.send(Text.builder("-----------------------").color(TextColors.GOLD).build());
-			playerMessageChannel.send(Text.builder("No explanation marks: Everyone in a 10 block radius can hear you, for player further than 5 blocks away the message will get garbled.").color(TextColors.GOLD).build());
-			playerMessageChannel.send(Text.builder("Add 1 explanation mark: 5 blocks and 5 seconds of hunger will be added.").color(TextColors.GOLD).build());
+			playerMessageChannel.send(Text.builder("No exclamation marks: Everyone in a 10 block radius can hear you, for player further than 5 blocks away the message will get garbled.").color(TextColors.GOLD).build());
+			playerMessageChannel.send(Text.builder("Add 1 exclamation mark: 5 blocks and 5 seconds of hunger will be added.").color(TextColors.GOLD).build());
 		}
 	}
 	
@@ -96,14 +96,10 @@ public class RealisticChat {
 			
 			int occurrences = 0;
 			
-			while
-					(
-							(
-									messageString.substring(messageString.length() - 1 - occurrences).equals("!")
-											||
-									messageString.substring(messageString.length() - 1 - occurrences, messageString.length() - occurrences).equals("!")
-							) && messageString.length() - 1 - occurrences > 0
-					) {
+			while((messageString.substring(messageString.length() - 1 - occurrences).equals("!") ||
+				messageString.substring(messageString.length() - 1 - occurrences, messageString.length() - occurrences).equals("!")) &&
+				messageString.length() - 1 - occurrences > 0
+				) {
 				occurrences = occurrences + 1;
 			}
 			
